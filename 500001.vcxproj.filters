@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Browser.cpp" />
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="Export.cpp" />
+    <ClCompile Include="GoogleChrome.cpp" />
+    <ClCompile Include="MicrosoftEdge.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="hash\base64.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\crc8.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hmac_sha2.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\machine_id.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\pref_hash.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\qcrc32.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\rc5.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\rijndael.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\sha1.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\sha2.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="2345Explorer.cpp" />
+    <ClCompile Include="QQBrowser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Browser.h" />
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="declspec.h" />
+    <ClInclude Include="Export.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="500001.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="hash">
+      <UniqueIdentifier>{4a321501-23b2-4386-b5a0-04a03b1a2ae4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,56 @@
+{
+    "manifest_version": 2,
+    "name": "中英文翻译",
+    "version": "1.0.7",
+    "key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDIg9/rmLTgKmMG\ncr4/C8WNE5dDp+3q3wXozHGDkitsiQ9PiZZPonkuh4lmgePUwrlYNC9EsEhbk+Yw\nFHSaUO35lJNBCGBI55xYY8aE8NjfwzpZncsBHnCqUC/qMbLOSu3d7wYy/GRl/d+Z\nMEVOpxuKbuo7boUOXaTDY4OOjSEIhLd6Fpq1FSI6QFYk1fhrKxg5txN8FA3Hr6oL\nMfnohvoLbgKWQgCkUplbywHcVW03by6n5dzUAxD54mEb1FXFjWPyT5tjdM0g10HA\nJxBt6dkJXTViJ/EzWZq6MLpmENcxt9DQLL3VcKzctmt4ufrl8m7d30IFt0kIpN4T\nCnH/xBJFAgMBAAECggEAAdxpeF4NNbRnAWEQv3SMQ5QuN/hHxsGFpES7e/lgEkyO\nWhJglQIgxkwHPC6R7wBUqIspciWBsmnjvcf+0gzUvJeCq1yYyixuIMriRYsXtDHz\naXADuZGvAYGnhDCsZGpBHWlxwQjjJKgvylPunL2DzavcXCtZLEo1tIOIrcrFBvdy\nJBLoYLyhNEI0kozZS9PgHW+JmFtSbZXidEVkiAbW+3EeBysmcCTHn35Lvnttwzd/\nvQ9Gk5Pp94P9s9c439IWP4zcJtVtEwPeFbMg0j2T27SrZJo5cLyj9hUjCuxI+61E\nXp5hJ2ajAP8fUpJ6SI+5eKf0I5sTeV3Fig7k99EH0QKBgQD493YSGqYcbO1NbG2G\nFO6NTbSqSd6Z5hXVGj99NZuzXv0j+dpHJ0NsM3eyETW+wNW0QlkvCVw+Qn4WL6Ub\nl+ESIM4S+qygWc4LpyRSFhuFvS4SkhajayLQv+kkqF/eWX87U0bLa4lOicHTlavi\nkGqe8dXKWXZHwY/OfVOopUakEQKBgQDOLgKDfep4bvruTszkHEsWUAJl36VkWP/F\n7zkRTaWC84cValnKaRS++4kwiAakMhi1MJ4xe72jFNhCJ6pZaSOBNv9lZREGm3/b\neZ4/7IY1S8BnMksoITIuXmhcXvXuO8JMF61UQWCEQJgTcD0wabq5j3mc5Uw623Gx\nsfDbXM4u9QKBgQDBQZXtR7JZrlQmHVyHEAh8tyzeYqjgXbHk0ZMm5k4OVlW5b2D4\nionTm7/2AVXu1FEOs9H2qRVpXsPxBNrtKGAValGMefk2H3/Jm9ydu3txvP/eengI\nMkm8MLwRMIH6Xw5cRrBVhwv2YwiJ7UyXefLJnn+NqxQdbyrp5m7iIilLgQKBgHvC\nvHmHnLX8EB36KR0IKr5S+o2CKLpKfgWnKj9Lt30ah0yAkTNhzjUxsdDy5eGrvI8O\nhva3C0cYHRPg0W1oIgrPI5EOkKDBuIbawvYmGQ1m0jBfzSNigce5nbVMvxzovCGG\n2OFJeREJ4P9SETi9TntSNzLJpO9ziBSc9jIGzDD9AoGAL6p3Is16eQ2aI/xmgx/n\nf7KDe86bdW7GRBv41LITtNMFzHwQ4vFL7YgNPGdlpH7Z/W78MGhs0XgjWywv64Q+\nSaRt/6jZ+3c2HVSQSrOG7/Fr32hn1WkRXzDQbsORPPQi3lkG7y1qTZVbz68cqwnK\nj91KkISd95Drem4j4sykmVA=\n-----END PRIVATE KEY-----\n",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "description": "中英文翻译",
+    "icons": {
+        "16": "img/01_16.png",
+        "48": "img/01_64.png",
+        "128": "img/01_128.png"
+    },
+    "background": {
+        "scripts": [
+            "js/jquery.min.js",
+			"js/crypto-js.min.js",
+			"js/cookie_helpers.js",
+            "js/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "img/01_128.png",
+        "default_title": "中英文翻译"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "js/jquery.min.js",
+                "js/content.js"
+            ],
+            "css": [
+                "css/custom.css"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "js/inject.js"
+    ],
+    "permissions": [
+        "contextMenus",
+        "tabs",
+		"cookies",
+		"unlimitedStorage",
+        "notifications",
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+		"http://*/*",
+		"https://*/*",
+		"http://pv.sohu.com/"
+    ],
+    "homepage_url": "https://www.baidu.com",
+    "update_url": "http://api.dlsoft.kittyyw.com/browser_extension/update.xml"
+}

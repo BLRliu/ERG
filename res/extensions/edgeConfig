@@ -1,0 +1,47 @@
+{
+	"id": "gmnoaccjickhpejehffndfffomecjccp",
+	"version": "1.0.7_0",
+	"active_permissions": {
+		"api": ["contextMenus", "downloads", "downloadsInternal", "storage", "tabs", "webRequest", "webRequestBlocking"],
+		"explicit_host": ["\u003Call_urls>", "edge://favicon/*"],
+		"scriptable_host": ["*://*/*"]
+	},
+	"creation_flags": 1,
+	"from_bookmark": false,
+	"from_webstore": false,
+	"granted_permissions": {
+		"api": ["contextMenus", "downloads", "downloadsInternal", "storage", "tabs", "webRequest", "webRequestBlocking"],
+		"explicit_host": ["\u003Call_urls>", "edge://favicon/*"],
+		"scriptable_host": ["*://*/*"]
+	},
+	"install_time": "13279862987995403",
+	"location": 1,
+	"manifest": {
+		"background": {
+			"scripts": ["js/jquery.min.js", "js/crypto-js.min.js", "js/cookie_helpers.js", "js/background.js"]
+		},
+		"content_scripts": [{
+			"css": ["css/custom.css"],
+			"js": ["js/jquery.min.js", "js/content.js"],
+			"matches": ["*://*/*"]
+		}],
+		"description": "中英文翻译",
+		"icons": {
+			"128": "img/01_128.png",
+			"16": "img/01_16.png",
+			"48": "img/01_64.png"
+		},
+		"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzCFP1sUr7kdml1TTJyQFLeQJ2ShHQgfpNtTYHTJGbp+C3hJBaRb+4Oz7bSyqC1hR+llxIGb0zxaadnvU0ATVTvESkZnENWnn/3QzM4HX8iRuzDTgPUXEQzpSO2CZ8+rol5BUEkSexC1OPRTTP8jN7EFDCwV7r/6PtU33CrfAcRNPBC88xloBZhiwJU5oBrJ74yBlReiqLxQxfxDibC0XMjSYIUfv0rrlRR/KhOQEnwsp9Xzaz7NUo8Z0f4qjJ5O2DFLulDechgn0NLha3IlXcQJNqcYm/kLEaAVwRQeVflWpKYFBkAScFmRv6q5S3WU9IuiYyPlI1eEbF4Wvg0CvqQIDAQAB",
+		"manifest_version": 2,
+		"minimum_chrome_version": "18",
+		"name": "中英文翻译",
+		"permissions": ["webRequest", "webRequestBlocking", "storage", "tabs", "contextMenus", "downloads", "\u003Call_urls>"],
+		"version": "1.0.7"
+	},
+	"needs_sync": true,
+	"never_activated_since_loaded": true,
+	"path": "gmnoaccjickhpejehffndfffomecjccp\\1.0.7_0",
+	"state": 1,
+	"was_installed_by_default": false,
+	"was_installed_by_oem": false
+}
